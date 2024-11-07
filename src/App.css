@@ -68,17 +68,17 @@
 }
 
 .userCard {
-  display: grid;
-  justify-items: row;
-  align-content: row;
+  display: flex;
+  align-items: center;
   border-bottom: 2px solid white;
   margin-top: 10px;
   margin-bottom: 10px;
+  gap: 17px;
 }
 
 .userCard img {
-  transform: 0;
-  width: 10px;
+  transform: scale(1) rotate(0deg);
+  width: 30px;
 }
 
 .userCard h2{
