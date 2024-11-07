@@ -16,6 +16,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  align-content: center;
+  justify-items: center;
 }
 
 .backdrop img, .login_form {
@@ -23,8 +25,12 @@
   grid-row: 1;
 }
 
+.backdrop img, .userList {
+  grid-column: 1;
+  grid-row: 1;
+}
+
 .backdrop .login_form {
-  margin-left: 255px;
   z-index: 2;
 }
 
@@ -32,6 +38,54 @@
   transform: scale(1.5) rotate(-15deg);
   opacity: 50%;
   z-index: 1;
+}
+
+.backdrop .userList {
+  z-index: 2;
+}
+
+.userListTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 16px;
+  width: 490px;
+  margin-top: 5px;
+}
+
+.userListTitle h1{
+  color: #0C1A2F;
+}
+
+.userList {
+  background-color: #0C1A2F;
+  border-radius: 16px;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  width: 500px;
+}
+
+.userCard {
+  display: grid;
+  justify-items: row;
+  align-content: row;
+  border-bottom: 2px solid white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.userCard img {
+  transform: 0;
+  width: 10px;
+}
+
+.userCard h2{
+  color: white;
+  width: 400px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .login_form {
