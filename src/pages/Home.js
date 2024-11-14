@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../CodeKingTrans.png';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import '../App.css';
 
 
@@ -14,11 +15,11 @@ function Login() {
     console.log("updated...")
   }, [email, password]);
 
-  const login = () => {
-    console.log(email)
-    console.log(password)
+  const login = useCallback(() => {
+    console.log(email);
+    console.log(password);
     navigate('/user');
-  }
+  }, [email, password, navigate]);
 
   return (
     <div className='login_form'>
@@ -63,11 +64,7 @@ function Home() {
             <img alt='Code King Logo' src={logo}></img>
             <Login />
         </div>
-        <div className='footer'>
-            <img alt='instagram logo' src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png'></img>
-            <img alt='x logo' src='https://acrm.org/wp-content/uploads/2024/03/twitter-x-logo-101c7d2420-seeklogocom.png'></img>
-            <img alt='facebook logo' src='https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png'></img>
-        </div>
+        <Footer />
     </div>
   );
 }
