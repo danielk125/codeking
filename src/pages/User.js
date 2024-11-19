@@ -16,7 +16,7 @@ function UserCard({ user }){
 
 
 function User() {
-    const { data: users, loading, error } = useFetch("https://disc-assignment-5-users-api.onrender.com/api/users");
+    const { data: users, loading, error } = useFetch("http://localhost:5432/users");
     
 
 
