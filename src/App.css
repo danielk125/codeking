@@ -67,6 +67,12 @@
   width: 500px;
 }
 
+.userList ul {
+  list-style-type: none;
+  padding: 0; /* Optional: Removes default padding */
+  margin: 0; /* Optional: Removes default margin */
+}
+
 .userCard {
   display: flex;
   align-items: center;
